@@ -14,7 +14,7 @@ class ContactService {
     return (await this.api.delete("/")).data;
   }
   async get(id) {
-    return (await this.api.get(`/${id}`)).data;
+    return (await this.api.get(`?id=${id}`)).data;
   }
   async update(id, data) {
     return (await this.api.put(`/${id}`, data)).data;
